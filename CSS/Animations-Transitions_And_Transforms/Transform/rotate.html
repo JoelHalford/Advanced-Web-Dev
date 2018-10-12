@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<title>Rotate()</title>
+	<style>
+		p { 
+		  width: 50px;
+		  height: 50px;
+		  background-color: #e74c3c;
+		  color: #ecf0f1;
+		  border: 2px solid #2c3e50;
+		}
+
+		.transformed {
+		  background-color: #9b59b6;
+		  /*amount to rotate*/
+		  -webkit-transform: rotate(-20deg) scale(1.5);
+		          transform: rotate(-20deg) scale(1.5);
+		  /*point at which rotation happens*/
+		  -webkit-transform-origin: top left;
+		          transform-origin: top left;
+		}
+	</style>
+<head>
+</head>
+<body>
+	<p>Hello</p>
+	<p class="transformed">Hello</p>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<title>Basics</title>
+	<style>
+		li {
+			font-weight: 800;
+		}
+		.box {
+		  background: #9b59b6;
+		  height: 200px;
+		  width: 200px;
+		  line-height:200px;
+		  text-align: center;
+		  color: white;
+		  font-size: 20px;
+		}
+
+		.animated {
+			/*what properties should be transitioned?*/
+		  transition-property: background-color, font-size;
+		  /*how long should the transition last?*/
+		  transition-duration: 2s, 1s;
+		  /*acceleration curve for transition*/
+		  transition-timing-function: linear;
+		  /*how long of a pause before transition begins*/
+		  transition-delay: 0.5s, 2s;
+		}
+
+		.box:hover {
+		  background: #e74c3c;
+		  font-size: 1.5em;
+		}
+
+		.crazy {
+			/*property, duration, timing-function, delay*/
+		  transition: transform 3s ease-in 3s, background 1s linear 6s;
+		}
+
+		.crazy:hover {
+		  transform: rotate(720deg) scale(0.5);
+		  background: #e67e22;
+		  border-radius: 100px;
+		}
+	</style>
+<head>
+</head>
+<body>
+	<h1>4 Transition properties</h1>
+	<ul>
+		<li>transition-duration</li>
+		<p>Duration of transition</p>
+		<li>transition-property</li>
+		<p>Which properties to transition</p>
+		<li>transition-timing-function</li>
+		<p>The accelleration of duration</p>
+		<li>transition-delay</li>
+		<p>How long to wait for transition to start</p>
+	</ul>
+
+	<p class="box">NO TRANSITION</p>
+	<p class="animated box">TRANSITION</p>
+	<p class="crazy box">CRAZINESS</p>
+</body>
+</html>
