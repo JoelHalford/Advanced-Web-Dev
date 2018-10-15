@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+
+		function countDown(time){
+			var intervalId = setInterval(function(){
+				if (time > 0) {
+					console.log("Timer: ", time);
+				} else {
+					console.log("Ring Ring Ring!!!");
+					clearInterval(intervalId);
+				}
+				time--;
+			}, 1000);			
+		}
+
+		var time = prompt("Input number");
+		countDown(time);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
