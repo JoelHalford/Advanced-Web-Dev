@@ -156,6 +156,8 @@ describe("a simple setTimeout", function(){
 * beforeAll, afterAll, beforeEach, afterEach, and it takes an optional single argument (commonly called 'done') that should be called when the async work is complete.
 * A test will not complete until its 'done' is called.
 
+* Async Test
+
 function getUserInfo(username){
 	return $.getJSON("https://api.github.com/users/" + username);
 }
@@ -168,3 +170,29 @@ describe("#getUserInfo", function(){
 		});
 	});
 });
+
+# TDD - Test Driven Development
+1. Write the tests.
+2. See the tests fail.
+3. Write code to pass the tests.
+4. Refactor code as necessary.
+5. Repeat.
+
+# BDD - Behaviour Driven Development
+* A subset of TDD
+* Not mutually exclusive with TDD
+* Involves being verbose with our style and describing the behavior of the functionality
+* Helpful when testing the design of the software
+
+# Other Kinds of Tests
+* Integration tests
+* Acceptance tests		Testing full system
+* Stress tests			How effective apps are under high traffic
+
+# RECAP
+* Unit testing involves testing pieces of functionality
+* Jasmine is a testing framework that allows us to easily write unit tests
+* Jasmine has quite a few matchers for testing almost any kind of expectation
+* Using beforeEach / afterEach / beforeAll / afterAll hooks can help reduce duplication and confusion
+* Jasmine provides spies for mimicking the behaviour of a function
+* Jasmine provides a clock object for testing timers and a callback function for testing asynchronous code
